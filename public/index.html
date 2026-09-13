@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f8f6f0">
+<title>OneBuckQR | One QR Code. One Dollar. No Subscription.</title>
+<meta name="description" content="Create a permanent static QR code for $1. No trial, account, subscription, recurring charge, or expiration. Download PNG and SVG instantly.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://onebuckqr.com/">
+<meta property="og:title" content="OneBuckQR — One QR. One buck. Done.">
+<meta property="og:description" content="A permanent static QR code for $1. No subscription. No expiration.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://onebuckqr.com/">
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<style>
+:root{--ink:#101113;--muted:#686a70;--paper:#f7f4ed;--line:#dedad0;--green:#176b45}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;color:var(--ink);background:radial-gradient(circle at 12% 5%,#fff,transparent 28%),linear-gradient(#fbfaf6,var(--paper));font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.wrap{width:min(980px,calc(100% - 32px));margin:auto}
+.top{height:72px;display:flex;align-items:center;justify-content:space-between;font-weight:900;letter-spacing:-.03em}
+.top small{font-weight:700;color:var(--muted);letter-spacing:0}
+.hero{text-align:center;padding:62px 0 36px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#ffffffb8;padding:8px 12px;border-radius:99px;font-size:.76rem;font-weight:750;margin-bottom:20px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+h1{font-size:clamp(3.2rem,10vw,7rem);line-height:.88;letter-spacing:-.075em;margin:0;font-weight:950}
+.hero p{max-width:650px;margin:24px auto 0;color:var(--muted);font-size:1.08rem;line-height:1.55}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.card{background:#fffffff2;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 18px 60px #1111110d}
+.card h2{margin:0 0 8px;font-size:1.28rem}
+.sub{color:var(--muted);line-height:1.5;margin:0}
+.label{font-size:.8rem;font-weight:850;display:block;margin:24px 0 8px}
+input{width:100%;border:1px solid #c8c4ba;border-radius:14px;padding:16px;font:inherit;font-size:16px;background:#fff;outline:none}
+input:focus{border-color:#777;box-shadow:0 0 0 4px #1111}
+.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.stylebtn{border:1px solid #c8c4ba;background:#fff;border-radius:12px;padding:10px 6px;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer;min-height:44px}
+.stylebtn.active{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+.stylebtn:focus-visible{outline:3px solid #1112;outline-offset:2px}
+.btn{width:100%;min-height:54px;margin-top:13px;border:0;border-radius:14px;padding:15px 18px;background:var(--ink);color:#fff;font-weight:850;font-size:1rem;cursor:pointer;touch-action:manipulation}
+.btn:disabled{opacity:.55}
+.note{font-size:.76rem;color:var(--muted);text-align:center;margin-top:12px}
+.err{font-size:.82rem;color:#a3133d;margin-top:10px}
+.repaired{font-size:.78rem;color:var(--green);margin-top:10px;font-weight:750}
+.preview{min-height:340px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}
+.qrbox{width:220px;height:220px;border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff;display:grid;place-items:center}
+.qrbox img{width:100%;height:100%;object-fit:contain}
+.price{font-size:2.5rem;font-weight:950;margin-top:15px;letter-spacing:-.05em}
+.price span{font-size:.85rem;color:var(--muted);letter-spacing:0}
+.lock{position:absolute;inset:0;background:#ffffffa8;backdrop-filter:blur(6px);display:grid;place-items:center}
+.lock b{font-size:1.05rem}
+.lock small{color:var(--muted)}
+.promises{display:grid;grid-template-columns:repeat(4,1fr);margin:18px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#ffffffb0}
+.promises div{text-align:center;padding:18px 8px;font-size:.8rem;font-weight:850}
+.promises div+div{border-left:1px solid var(--line)}
+.why{max-width:760px;margin:60px auto 80px;line-height:1.72}
+.why h2{letter-spacing:-.04em}
+.why p{color:var(--muted)}
+.success{display:none;max-width:720px;margin:70px auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px}
+.success h2{font-size:clamp(2.7rem,8vw,4.3rem);line-height:.9;letter-spacing:-.065em;margin:12px 0 30px}
+.downloads{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.secondary{min-height:54px;border:1px solid var(--ink);background:#fff;border-radius:14px;padding:15px;font-weight:850;cursor:pointer}
+.hide{display:none!important}
+footer{border-top:1px solid var(--line);padding:25px 0 34px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between}
+footer a{color:inherit;margin-left:16px}
+@media(max-width:740px){
+  .wrap{width:min(100% - 22px,600px)}
+  .top{height:58px;font-size:.82rem}.top small{font-size:.68rem}
+  .hero{padding:34px 0 24px}.hero h1{font-size:clamp(3.4rem,17vw,5.2rem)}
+  .hero p{font-size:.98rem;margin-top:18px;padding:0 8px}.eyebrow{margin-bottom:16px}
+  .grid{grid-template-columns:1fr;gap:12px}.card{padding:22px;border-radius:21px}
+  .preview{min-height:290px}.qrbox{width:190px;height:190px}
+  .styles{grid-template-columns:1fr 1fr}
+  .promises{grid-template-columns:1fr 1fr}.promises div+div{border-left:0}.promises div:nth-child(even){border-left:1px solid var(--line)}.promises div:nth-child(n+3){border-top:1px solid var(--line)}
+  .why{margin:42px 8px 58px}.success{margin:38px 0;padding:26px 22px}.downloads{grid-template-columns:1fr}
+  .btn,.secondary{font-size:1rem}.note{font-size:.72rem}
+  footer{padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+}
+@media(max-width:390px){.top small{display:none}.hero h1{font-size:3.65rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div>ONEBUCKQR</div><small>$1 once. No subscription. Ever.</small></header>
+
+<main id="main">
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span>permanent static QR code</div>
+  <h1>One QR.<br>One buck.</h1>
+  <p>No trial. No account. No monthly charge hiding in the fine print. Paste your link, choose your look, pay one dollar, download your QR code, and move on with your life.</p>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h2>Paste your link</h2>
+    <p class="sub">Your destination is encoded directly into the QR. It does not depend on our servers to keep working.</p>
+
+    <label class="label" for="url">Website address</label>
+    <input id="url" placeholder="example.com" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false">
+
+    <label class="label">Choose a style</label>
+    <div class="styles" id="styles" role="group" aria-label="QR code style">
+      <button class="stylebtn active" type="button" data-style="classic" aria-pressed="true">Classic</button>
+      <button class="stylebtn" type="button" data-style="rounded" aria-pressed="false">Rounded</button>
+      <button class="stylebtn" type="button" data-style="dots" aria-pressed="false">Dots</button>
+      <button class="stylebtn" type="button" data-style="bold" aria-pressed="false">Bold</button>
+    </div>
+
+    <button id="make" class="btn">Make my QR</button>
+    <button id="buy" class="btn hide">Download it — $1</button>
+    <div id="error" class="err" aria-live="polite"></div>
+    <div id="repaired" class="repaired hide" aria-live="polite"></div>
+    <div class="note">One-time payment. We do not offer subscriptions.</div>
+  </div>
+
+  <div class="card preview">
+    <div id="empty">
+      <div class="qrbox" style="font-size:3.5rem;font-weight:950">QR</div>
+      <div class="price">$1 <span>once</span></div>
+    </div>
+    <div id="ready" class="hide">
+      <div class="qrbox"><img id="qr" alt="QR code preview"></div>
+      <div class="lock"><div><b>Your QR is ready.</b><br><small>Unlock PNG + SVG for $1.</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="promises">
+  <div>No subscription</div><div>No account</div><div>No expiration</div><div>No funny business</div>
+</section>
+
+<section class="why">
+  <h2>Why doesn’t it expire?</h2>
+  <p>Your destination is stored directly inside the QR image. We don't route scans through a OneBuckQR redirect. Once you download it, we cannot switch it off, change where it goes, or charge you later to keep it working.</p>
+  <b>Yes, genuinely free QR generators exist. We are for people who would rather spend one dollar than spend twenty minutes figuring out which “free” site actually means free.</b>
+</section>
+</main>
+
+<section id="success" class="success">
+  <div class="eyebrow"><span class="dot"></span>payment confirmed</div>
+  <h2>That's it.<br>We're done.</h2>
+  <p>Your QR code is yours forever. No account was created and there is no subscription to cancel.</p>
+  <div class="downloads">
+    <button id="png" class="btn" style="margin:0">Download PNG</button>
+    <button id="svg" class="secondary">Download SVG</button>
+  </div>
+  <p style="color:var(--muted);font-size:.8rem;line-height:1.55">PNG is easiest for everyday use. SVG stays sharp at any print size.</p>
+</section>
+
+<footer>
+  <span>© 2026 OneBuckQR</span>
+  <span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></span>
+</footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let target = '';
+let qrStyle = sessionStorage.getItem('onebuckqr_style') || 'classic';
+
+function repairDuplicatedUrl(v){
+  let s = v.trim();
+  if(!s) return {value:s,repaired:false};
+
+  // Repair the exact class of error where the same absolute URL
+  // is accidentally pasted twice with no separator.
+  for(let pass=0; pass<4; pass++){
+    const lower = s.toLowerCase();
+    const firstHttp = lower.indexOf('http://');
+    const firstHttps = lower.indexOf('https://');
+    let first = -1;
+    if(firstHttp >= 0 && firstHttps >= 0) first = Math.min(firstHttp, firstHttps);
+    else first = Math.max(firstHttp, firstHttps);
+    if(first < 0) break;
+
+    const searchFrom = first + (lower.startsWith('https://', first) ? 8 : 7);
+    const nextHttp = lower.indexOf('http://', searchFrom);
+    const nextHttps = lower.indexOf('https://', searchFrom);
+    let second = -1;
+    if(nextHttp >= 0 && nextHttps >= 0) second = Math.min(nextHttp, nextHttps);
+    else second = Math.max(nextHttp, nextHttps);
+    if(second < 0) break;
+
+    const a = s.slice(first, second);
+    const b = s.slice(second);
+    if(a === b){
+      s = s.slice(0, first) + a;
+      return {value:s,repaired:true};
+    }
+    break;
+  }
+  return {value:s,repaired:false};
+}
+
+function clean(v){
+  let repaired = repairDuplicatedUrl(v);
+  v = repaired.value.trim();
+
+  if(!v) throw Error('Paste a link first.');
+  if(/\s/.test(v)) throw Error('Please enter one website link without spaces.');
+  if(!/^https?:\/\//i.test(v)) v = 'https://' + v;
+
+  let u;
+  try { u = new URL(v); }
+  catch { throw Error('That link does not look valid. Please check it and try again.'); }
+
+  if(!['http:','https:'].includes(u.protocol)) throw Error('Please enter a normal web link.');
+  if(!u.hostname || !u.hostname.includes('.')) throw Error('Please enter a complete website address.');
+
+  return {url:u.toString(), repaired:repaired.repaired};
+}
+
+function obj(t){
+  let q = qrcode(0,'M');
+  q.addData(t);
+  q.make();
+  return q;
+}
+
+function isFinder(r,c,n){
+  return (r < 7 && c < 7) || (r < 7 && c >= n-7) || (r >= n-7 && c < 7);
+}
+
+function svgMarkup(t, style=qrStyle){
+  const q = obj(t), n = q.getModuleCount(), m = 4, z = n + m*2;
+  let parts = [
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${z} ${z}">`,
+    `<rect width="100%" height="100%" fill="white"/>`
+  ];
+
+  for(let r=0;r<n;r++){
+    for(let c=0;c<n;c++){
+      if(!q.isDark(r,c)) continue;
+      const x = c + m, y = r + m;
+      const finder = isFinder(r,c,n);
+
+      if(style === 'dots' && !finder){
+        parts.push(`<circle cx="${x+.5}" cy="${y+.5}" r=".39" fill="black"/>`);
+      } else if(style === 'rounded' && !finder){
+        parts.push(`<rect x="${x+.08}" y="${y+.08}" width=".84" height=".84" rx=".24" fill="black"/>`);
+      } else if(style === 'bold' && !finder){
+        parts.push(`<rect x="${x-.04}" y="${y-.04}" width="1.08" height="1.08" fill="black"/>`);
+      } else {
+        parts.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="black"/>`);
+      }
+    }
+  }
+
+  parts.push(`</svg>`);
+  return parts.join('');
+}
+
+function svgDataUrl(t, style=qrStyle){
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgMarkup(t,style));
+}
+
+function render(t){
+  $('#qr').src = svgDataUrl(t, qrStyle);
+}
+
+function setStyle(style){
+  qrStyle = style;
+  sessionStorage.setItem('onebuckqr_style', qrStyle);
+  document.querySelectorAll('.stylebtn').forEach(btn=>{
+    const active = btn.dataset.style === qrStyle;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+  if(target) render(target);
+}
+
+document.querySelectorAll('.stylebtn').forEach(btn=>{
+  btn.onclick = ()=>setStyle(btn.dataset.style);
+});
+setStyle(qrStyle);
+
+function make(){
+  try{
+    const result = clean($('#url').value);
+    target = result.url;
+    sessionStorage.setItem('onebuckqr_target', target);
+    sessionStorage.setItem('onebuckqr_style', qrStyle);
+
+    // Replace an accidentally duplicated URL in the input with the repaired URL
+    // so the customer can see exactly what will be encoded.
+    $('#url').value = target;
+
+    render(target);
+    $('#empty').classList.add('hide');
+    $('#ready').classList.remove('hide');
+    $('#make').classList.add('hide');
+    $('#buy').classList.remove('hide');
+    $('#error').textContent = '';
+
+    if(result.repaired){
+      $('#repaired').textContent = 'We detected a duplicated link and repaired it automatically.';
+      $('#repaired').classList.remove('hide');
+    } else {
+      $('#repaired').classList.add('hide');
+      $('#repaired').textContent = '';
+    }
+  }catch(e){
+    $('#error').textContent = e.message;
+    $('#repaired').classList.add('hide');
+  }
+}
+
+$('#make').onclick = make;
+$('#url').onkeydown = e => { if(e.key === 'Enter') make(); };
+
+$('#buy').onclick = async()=>{
+  try{
+    $('#buy').disabled = true;
+    $('#buy').textContent = 'Opening secure checkout…';
+    sessionStorage.setItem('onebuckqr_target', target);
+    sessionStorage.setItem('onebuckqr_style', qrStyle);
+
+    let r = await fetch('/api/checkout',{method:'POST'});
+    let d = await r.json();
+    if(!d.url) throw Error(d.error || 'Could not start checkout.');
+    location.href = d.url;
+  }catch(e){
+    $('#error').textContent = e.message;
+    $('#buy').disabled = false;
+    $('#buy').textContent = 'Download it — $1';
+  }
+};
+
+async function unlock(){
+  let p = new URLSearchParams(location.search);
+  if(p.get('paid') !== '1') return;
+
+  let id = p.get('session_id');
+  let saved = sessionStorage.getItem('onebuckqr_target');
+  let savedStyle = sessionStorage.getItem('onebuckqr_style') || 'classic';
+  if(!id || !saved) return;
+
+  let r = await fetch('/api/verify?session_id=' + encodeURIComponent(id));
+  let d = await r.json();
+
+  if(d.paid){
+    target = saved;
+    setStyle(savedStyle);
+    $('#main').classList.add('hide');
+    $('#success').style.display = 'block';
+    history.replaceState({},'',location.pathname);
+  }
+}
+
+function downloadPng(){
+  const q = obj(target);
+  const n = q.getModuleCount(), margin = 4, modulePx = 32;
+  const size = (n + margin*2) * modulePx;
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0,0,size,size);
+  ctx.fillStyle = '#000';
+
+  for(let r=0;r<n;r++){
+    for(let c=0;c<n;c++){
+      if(!q.isDark(r,c)) continue;
+
+      const x = (c + margin) * modulePx;
+      const y = (r + margin) * modulePx;
+      const finder = isFinder(r,c,n);
+
+      if(qrStyle === 'dots' && !finder){
+        ctx.beginPath();
+        ctx.arc(x + modulePx/2, y + modulePx/2, modulePx*.39, 0, Math.PI*2);
+        ctx.fill();
+      } else if(qrStyle === 'rounded' && !finder){
+        const inset = modulePx*.08, w = modulePx*.84, radius = modulePx*.24;
+        ctx.beginPath();
+        ctx.roundRect(x+inset,y+inset,w,w,radius);
+        ctx.fill();
+      } else if(qrStyle === 'bold' && !finder){
+        const grow = modulePx*.04;
+        ctx.fillRect(x-grow,y-grow,modulePx+grow*2,modulePx+grow*2);
+      } else {
+        ctx.fillRect(x,y,modulePx,modulePx);
+      }
+    }
+  }
+
+  let a = document.createElement('a');
+  a.href = canvas.toDataURL('image/png');
+  a.download = `onebuckqr-${qrStyle}.png`;
+  a.click();
+}
+
+$('#png').onclick = downloadPng;
+
+$('#svg').onclick = ()=>{
+  let b = new Blob([svgMarkup(target,qrStyle)],{type:'image/svg+xml'});
+  let u = URL.createObjectURL(b);
+  let a = document.createElement('a');
+  a.href = u;
+  a.download = `onebuckqr-${qrStyle}.svg`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(u),1000);
+};
+
+unlock();
+</script>
+</body>
+</html>
