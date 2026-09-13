@@ -16,3 +16,4 @@ Required Vercel environment variables:
 - SITE_URL (recommended: https://onebuckqr.com)
 
 Do not put Stripe secret keys into source control.
+Source connected to Vercel.
