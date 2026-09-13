@@ -6,12 +6,11 @@ module.exports=async function(req,res){
     const email=String(req.body?.email||'').trim().toLowerCase();
     if(!/^\S+@\S+\.\S+$/.test(email)) return res.status(400).json({error:'Enter a valid email address.'});
     const customer=await findCustomerByEmail(email);
-    // Always return success so this endpoint cannot be used to enumerate customers.
     if(!customer) return res.status(200).json({ok:true});
     if(!process.env.RESEND_API_KEY) return res.status(503).json({error:'Email recovery is not connected yet.'});
     const origin=process.env.SITE_URL||`${req.headers['x-forwarded-proto']||'https'}://${req.headers.host}`;
     const token=sign({customerId:customer.id,email,exp:Date.now()+30*60*1000});
-    const url=`${origin}/?recover=${encodeURIComponent(token)}`;
+    const url=`${origin}/recover.html?token=${encodeURIComponent(token)}`;
     const from=process.env.RECOVERY_FROM_EMAIL||'OneBuckQR <onboarding@resend.dev>';
     const response=await fetch('https://api.resend.com/emails',{
       method:'POST',
