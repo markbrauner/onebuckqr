@@ -11,7 +11,7 @@ module.exports=async function(req,res){
     const origin=process.env.SITE_URL||`${req.headers['x-forwarded-proto']||'https'}://${req.headers.host}`;
     const token=sign({customerId:customer.id,email,exp:Date.now()+30*60*1000});
     const url=`${origin}/recover.html?token=${encodeURIComponent(token)}`;
-    const from=process.env.RECOVERY_FROM_EMAIL||'OneBuckQR <onboarding@resend.dev>';
+    const from=process.env.RECOVERY_FROM_EMAIL||'OneBuckQR <credits@onebuckqr.com>';
     const response=await fetch('https://api.resend.com/emails',{
       method:'POST',
       headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json'},
