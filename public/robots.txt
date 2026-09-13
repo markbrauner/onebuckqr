@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://onebuckqr.com/sitemap.xml
