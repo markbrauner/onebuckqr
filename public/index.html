@@ -17,165 +17,52 @@
 :root{--ink:#101113;--muted:#686a70;--paper:#f7f4ed;--line:#dedad0;--green:#176b45;--white:#fff}
 *{box-sizing:border-box}html{background:var(--paper)}
 body{margin:0;color:var(--ink);background:radial-gradient(circle at 12% 5%,#fff,transparent 28%),linear-gradient(#fbfaf6,var(--paper));font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
-button,input{font:inherit}.wrap{width:min(1000px,calc(100% - 32px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;font-weight:950;letter-spacing:-.03em}.top small{font-weight:700;color:var(--muted);letter-spacing:0}.hero{text-align:center;padding:56px 0 34px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#ffffffc7;padding:8px 12px;border-radius:99px;font-size:.76rem;font-weight:800;margin-bottom:20px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}h1{font-size:clamp(3.3rem,10vw,7rem);line-height:.88;letter-spacing:-.075em;margin:0;font-weight:950}.hero p{max-width:690px;margin:24px auto 0;color:var(--muted);font-size:1.08rem;line-height:1.55}.walletbar{display:none;margin:0 auto 18px;border:1px solid #b9d6c7;background:#f5fbf7;border-radius:16px;padding:14px 18px;align-items:center;justify-content:space-between;gap:16px;font-size:.88rem}.walletbar b{color:var(--green)}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.card{background:#fffffff2;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 18px 60px #1111110d}.card h2{margin:0 0 8px;font-size:1.28rem}.sub{color:var(--muted);line-height:1.5;margin:0}.label{font-size:.8rem;font-weight:850;display:block;margin:22px 0 8px}.hint{font-size:.76rem;color:var(--muted);line-height:1.4;margin-top:7px}input{width:100%;border:1px solid #c8c4ba;border-radius:14px;padding:15px 16px;font-size:16px;background:#fff;outline:none}input:focus{border-color:#777;box-shadow:0 0 0 4px #1111}.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stylebtn,.packbtn,.formatbtn{border:1px solid #c8c4ba;background:#fff;border-radius:13px;padding:10px 8px;font-weight:800;cursor:pointer}.stylebtn{min-height:52px;font-size:.77rem}.stylebtn.active,.packbtn.active,.formatbtn.active{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.packbtn{position:relative;min-height:78px;text-align:left}.packbtn strong{display:block;font-size:1.15rem}.packbtn span{display:block;color:var(--muted);font-size:.72rem;margin-top:3px}.badge{position:absolute;right:7px;top:7px;background:var(--green);color:#fff!important;border-radius:99px;padding:3px 7px;font-size:.62rem!important;margin:0!important}.formats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.formatbtn{text-align:left;min-height:86px}.formatbtn strong{display:block}.formatbtn small{display:block;color:var(--muted);font-weight:600;line-height:1.35;margin-top:4px}.emailrow{display:none}.btn{width:100%;min-height:54px;margin-top:15px;border:0;border-radius:14px;padding:15px 18px;background:var(--ink);color:#fff;font-weight:850;font-size:1rem;cursor:pointer}.btn:disabled{opacity:.55}.secondary{width:100%;min-height:50px;border:1px solid var(--ink);background:#fff;border-radius:14px;padding:13px;font-weight:850;cursor:pointer}.note{font-size:.74rem;color:var(--muted);text-align:center;margin-top:11px;line-height:1.45}.err{font-size:.82rem;color:#a3133d;margin-top:10px}.ok{font-size:.8rem;color:var(--green);font-weight:800;margin-top:10px}.preview{min-height:430px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}.qrbox{width:225px;height:225px;border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff;display:grid;place-items:center}.qrbox img{width:100%;height:100%;object-fit:contain}.price{font-size:2.7rem;font-weight:950;margin-top:15px;letter-spacing:-.05em}.price span{font-size:.85rem;color:var(--muted);letter-spacing:0}.dest{max-width:310px;margin:12px auto 0;font-size:.74rem;color:var(--muted);overflow-wrap:anywhere}.promises{display:grid;grid-template-columns:repeat(4,1fr);margin:18px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#ffffffb0}.promises div{text-align:center;padding:18px 8px;font-size:.8rem;font-weight:850}.promises div+div{border-left:1px solid var(--line)}.why{max-width:780px;margin:58px auto 30px;line-height:1.72}.why h2{letter-spacing:-.04em}.why p{color:var(--muted)}.faq{max-width:780px;margin:0 auto 72px;border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:16px 0}.faq summary{font-weight:850;cursor:pointer}.faq p{color:var(--muted);line-height:1.55;font-size:.9rem}.success{display:none;max-width:720px;margin:65px auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px}.success h2{font-size:clamp(2.7rem,8vw,4.3rem);line-height:.9;letter-spacing:-.065em;margin:12px 0 22px}.success .balance{padding:13px 15px;background:#f5fbf7;border:1px solid #b9d6c7;border-radius:13px;margin:20px 0;font-weight:800}.downloadrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.hide{display:none!important}footer{border-top:1px solid var(--line);padding:25px 0 34px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between}footer a{color:inherit;margin-left:16px}
-@media(max-width:740px){.wrap{width:min(100% - 22px,600px)}.top{height:58px;font-size:.82rem}.top small{font-size:.68rem}.hero{padding:34px 0 24px}.hero h1{font-size:clamp(3.4rem,17vw,5.2rem)}.hero p{font-size:.98rem;margin-top:18px;padding:0 8px}.grid{grid-template-columns:1fr;gap:12px}.card{padding:22px;border-radius:21px}.preview{min-height:330px}.qrbox{width:190px;height:190px}.styles{grid-template-columns:1fr 1fr}.packs{grid-template-columns:1fr}.packbtn{min-height:65px}.promises{grid-template-columns:1fr 1fr}.promises div+div{border-left:0}.promises div:nth-child(even){border-left:1px solid var(--line)}.promises div:nth-child(n+3){border-top:1px solid var(--line)}.why{margin:42px 8px 30px}.faq{margin:0 8px 58px}.success{margin:38px 0;padding:26px 22px}.downloadrow{grid-template-columns:1fr}.walletbar{align-items:flex-start;flex-direction:column}.top small{display:none}}
+button,input{font:inherit}.wrap{width:min(1000px,calc(100% - 32px));margin:auto}.top{height:72px;display:flex;align-items:center;justify-content:space-between;font-weight:950;letter-spacing:-.03em}.top small{font-weight:700;color:var(--muted);letter-spacing:0}.hero{text-align:center;padding:56px 0 34px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#ffffffc7;padding:8px 12px;border-radius:99px;font-size:.76rem;font-weight:800;margin-bottom:20px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}h1{font-size:clamp(3.3rem,10vw,7rem);line-height:.88;letter-spacing:-.075em;margin:0;font-weight:950}.hero p{max-width:690px;margin:24px auto 0;color:var(--muted);font-size:1.08rem;line-height:1.55}.walletbar{display:none;margin:0 auto 18px;border:1px solid #b9d6c7;background:#f5fbf7;border-radius:16px;padding:14px 18px;align-items:center;justify-content:space-between;gap:16px;font-size:.88rem}.walletbar b{color:var(--green)}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.card{background:#fffffff2;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 18px 60px #1111110d}.card h2{margin:0 0 8px;font-size:1.28rem}.sub{color:var(--muted);line-height:1.5;margin:0}.label{font-size:.8rem;font-weight:850;display:block;margin:22px 0 8px}.hint{font-size:.76rem;color:var(--muted);line-height:1.4;margin-top:7px}input{width:100%;border:1px solid #c8c4ba;border-radius:14px;padding:15px 16px;font-size:16px;background:#fff;outline:none}input:focus{border-color:#777;box-shadow:0 0 0 4px #1111}.styles{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.stylebtn,.packbtn,.formatbtn{border:1px solid #c8c4ba;background:#fff;border-radius:13px;padding:10px 8px;font-weight:800;cursor:pointer}.stylebtn{min-height:52px;font-size:.77rem}.stylebtn.active,.packbtn.active,.formatbtn.active{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.packbtn{position:relative;min-height:78px;text-align:left}.packbtn strong{display:block;font-size:1.15rem}.packbtn span{display:block;color:var(--muted);font-size:.72rem;margin-top:3px}.badge{position:absolute;right:7px;top:7px;background:var(--green);color:#fff!important;border-radius:99px;padding:3px 7px;font-size:.62rem!important;margin:0!important}.formats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.formatbtn{text-align:left;min-height:86px}.formatbtn strong{display:block}.formatbtn small{display:block;color:var(--muted);font-weight:600;line-height:1.35;margin-top:4px}.emailrow{display:none}.btn{width:100%;min-height:54px;margin-top:15px;border:0;border-radius:14px;padding:15px 18px;background:var(--ink);color:#fff;font-weight:850;font-size:1rem;cursor:pointer}.btn:disabled{opacity:.55}.secondary{width:100%;min-height:50px;border:1px solid var(--ink);background:#fff;border-radius:14px;padding:13px;font-weight:850;cursor:pointer}.note{font-size:.74rem;color:var(--muted);text-align:center;margin-top:11px;line-height:1.45}.err{font-size:.82rem;color:#a3133d;margin-top:10px}.ok{font-size:.8rem;color:var(--green);font-weight:800;margin-top:10px}.preview{min-height:430px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}.qrbox{width:225px;height:225px;border:1px solid var(--line);border-radius:18px;padding:14px;background:#fff;display:grid;place-items:center}.qrbox img{width:100%;height:100%;object-fit:contain}.price{font-size:2.7rem;font-weight:950;margin-top:15px;letter-spacing:-.05em}.price span{font-size:.85rem;color:var(--muted);letter-spacing:0}.dest{max-width:310px;margin:12px auto 0;font-size:.74rem;color:var(--muted);overflow-wrap:anywhere}.promises{display:grid;grid-template-columns:repeat(4,1fr);margin:18px 0 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#ffffffb0}.promises div{text-align:center;padding:18px 8px;font-size:.8rem;font-weight:850}.promises div+div{border-left:1px solid var(--line)}.why{max-width:780px;margin:58px auto 30px;line-height:1.72}.why h2{letter-spacing:-.04em}.why p{color:var(--muted)}.faq{max-width:780px;margin:0 auto 72px;border-top:1px solid var(--line)}.faq details{border-bottom:1px solid var(--line);padding:16px 0}.faq summary{font-weight:850;cursor:pointer}.faq p{color:var(--muted);line-height:1.55;font-size:.9rem}.success{display:none;max-width:720px;margin:65px auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:40px}.success h2{font-size:clamp(2.7rem,8vw,4.3rem);line-height:.9;letter-spacing:-.065em;margin:12px 0 22px}.success .balance{padding:13px 15px;background:#f5fbf7;border:1px solid #b9d6c7;border-radius:13px;margin:20px 0;font-weight:800}.downloadrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.hide{display:none!important}footer{border-top:1px solid var(--line);padding:25px 0 34px;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between}footer a{color:inherit;margin-left:16px}dialog{width:min(520px,calc(100% - 32px));border:1px solid var(--line);border-radius:22px;padding:26px;background:#fff;color:var(--ink);box-shadow:0 28px 90px #0005}dialog::backdrop{background:#1119}.dialogurl{background:#f5f4f0;border:1px solid var(--line);padding:13px;border-radius:12px;overflow-wrap:anywhere;font-size:.84rem;margin:14px 0}.dialogactions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:15px}
+@media(max-width:740px){.wrap{width:min(100% - 22px,600px)}.top{height:58px;font-size:.82rem}.top small{font-size:.68rem}.hero{padding:34px 0 24px}.hero h1{font-size:clamp(3.4rem,17vw,5.2rem)}.hero p{font-size:.98rem;margin-top:18px;padding:0 8px}.grid{grid-template-columns:1fr;gap:12px}.card{padding:22px;border-radius:21px}.preview{min-height:330px}.qrbox{width:190px;height:190px}.styles{grid-template-columns:1fr 1fr}.packs{grid-template-columns:1fr}.packbtn{min-height:65px}.promises{grid-template-columns:1fr 1fr}.promises div+div{border-left:0}.promises div:nth-child(even){border-left:1px solid var(--line)}.promises div:nth-child(n+3){border-top:1px solid var(--line)}.why{margin:42px 8px 30px}.faq{margin:0 8px 58px}.success{margin:38px 0;padding:26px 22px}.downloadrow,.dialogactions{grid-template-columns:1fr}.walletbar{align-items:flex-start;flex-direction:column}.top small{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header class="top"><div>ONEBUCKQR</div><small>$1 once. No subscription. Ever.</small></header>
-
 <main id="main">
-<section class="hero">
-  <div class="eyebrow"><span class="dot"></span>static QR codes that stay yours</div>
-  <h1>One QR.<br>One buck.</h1>
-  <p>Or stock up: five for $4, ten for $7. No subscriptions, no monthly fees, and unused credits never expire.</p>
-</section>
-
+<section class="hero"><div class="eyebrow"><span class="dot"></span>static QR codes that stay yours</div><h1>One QR.<br>One buck.</h1><p>Or stock up: five for $4, ten for $7. No subscriptions, no monthly fees, and unused credits never expire.</p></section>
 <div id="walletbar" class="walletbar"><span><b id="walletcount">0 QR credits</b> waiting for you.</span><button id="usewallet" class="secondary" style="width:auto;min-height:40px;padding:9px 14px">Use a credit</button></div>
-
 <section class="grid">
-  <div class="card">
-    <h2>Build your QR</h2>
-    <p class="sub">Paste the destination, choose a look, give the file a useful name, and you're done.</p>
-
-    <label class="label" for="url">Website address</label>
-    <input id="url" placeholder="example.com" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false">
-    <div class="hint">We'll show the exact destination before you pay or use a credit.</div>
-
-    <label class="label">Choose a style</label>
-    <div class="styles" role="group" aria-label="QR code style">
-      <button class="stylebtn active" type="button" data-style="classic">Classic</button>
-      <button class="stylebtn" type="button" data-style="rounded">Rounded</button>
-      <button class="stylebtn" type="button" data-style="dots">Dots</button>
-      <button class="stylebtn" type="button" data-style="bold">Bold</button>
-    </div>
-
-    <label class="label" for="filename">Name your file</label>
-    <input id="filename" placeholder="restaurant-menu" autocomplete="off" spellcheck="false">
-    <div class="hint" id="filenamehint">We'll save it as <b>onebuckqr.png</b>.</div>
-
-    <label class="label">Choose your file type</label>
-    <div class="formats">
-      <button class="formatbtn active" type="button" data-format="png"><strong>PNG — Standard</strong><small>Best for websites, social media, email, and everyday use.</small></button>
-      <button class="formatbtn" type="button" data-format="svg"><strong>SVG — High-resolution</strong><small>Best for printing or making it large, like posters, signs, and business cards.</small></button>
-    </div>
-
-    <button id="make" class="btn">Preview my QR</button>
-    <div id="error" class="err" aria-live="polite"></div>
-    <div id="status" class="ok hide" aria-live="polite"></div>
-  </div>
-
-  <div class="card preview">
-    <div id="empty">
-      <div class="qrbox" style="font-size:3.5rem;font-weight:950">QR</div>
-      <div class="price">$1 <span>once</span></div>
-    </div>
-    <div id="ready" class="hide">
-      <div class="qrbox"><img id="qr" alt="QR code preview"></div>
-      <div class="dest"><b>Destination:</b> <span id="dest"></span></div>
-      <button id="openDest" class="secondary" style="margin-top:12px">Test destination</button>
-    </div>
-  </div>
+<div class="card"><h2>Build your QR</h2><p class="sub">Paste the destination, choose a look, give the file a useful name, and you're done.</p><label class="label" for="url">Website address</label><input id="url" placeholder="example.com" inputmode="url" autocomplete="url" autocapitalize="none" spellcheck="false"><div class="hint">We'll show the exact destination before you pay or use a credit.</div><label class="label">Choose a style</label><div class="styles" role="group" aria-label="QR code style"><button class="stylebtn active" type="button" data-style="classic">Classic</button><button class="stylebtn" type="button" data-style="rounded">Rounded</button><button class="stylebtn" type="button" data-style="dots">Dots</button><button class="stylebtn" type="button" data-style="bold">Bold</button></div><label class="label" for="filename">Name your file</label><input id="filename" placeholder="restaurant-menu" autocomplete="off" spellcheck="false"><div class="hint" id="filenamehint">We'll save it as <b>onebuckqr.png</b>.</div><label class="label">Choose your file type</label><div class="formats"><button class="formatbtn active" type="button" data-format="png"><strong>PNG — Standard</strong><small>Best for websites, social media, email, and everyday use.</small></button><button class="formatbtn" type="button" data-format="svg"><strong>SVG — High-resolution</strong><small>Best for printing or making it large, like posters, signs, and business cards.</small></button></div><button id="make" class="btn">Preview my QR</button><div id="error" class="err" aria-live="polite"></div><div id="status" class="ok hide" aria-live="polite"></div></div>
+<div class="card preview"><div id="empty"><div class="qrbox" style="font-size:3.5rem;font-weight:950">QR</div><div class="price">$1 <span>once</span></div></div><div id="ready" class="hide"><div class="qrbox"><img id="qr" alt="QR code preview"></div><div class="dest"><b>Destination:</b> <span id="dest"></span></div><button id="openDest" class="secondary" style="margin-top:12px">Test destination</button></div></div>
 </section>
-
-<section id="purchase" class="card hide" style="margin-top:18px">
-  <h2>Choose how many you want</h2>
-  <p class="sub">Buy once. Use them whenever you want. Unused credits never expire.</p>
-  <div class="packs" style="margin-top:18px">
-    <button class="packbtn active" type="button" data-credits="1" data-price="1"><strong>1 for $1</strong><span>$1.00 each</span></button>
-    <button class="packbtn" type="button" data-credits="5" data-price="4"><strong>5 for $4</strong><span>80¢ each</span></button>
-    <button class="packbtn" type="button" data-credits="10" data-price="7"><span class="badge">BEST VALUE</span><strong>10 for $7</strong><span>70¢ each</span></button>
-  </div>
-  <div id="emailrow" class="emailrow">
-    <label class="label" for="email">Email for credit recovery</label>
-    <input id="email" type="email" placeholder="you@example.com" autocomplete="email">
-    <div class="hint">Needed for packs so you can recover unused credits later. No marketing email.</div>
-  </div>
-  <button id="buy" class="btn">Continue to secure checkout — $1</button>
-  <div class="note">Payments are handled by Stripe. No subscription will be created.</div>
-</section>
-
+<section id="purchase" class="card hide" style="margin-top:18px"><h2>Choose how many you want</h2><p class="sub">Buy once. Use them whenever you want. Unused credits never expire.</p><div class="packs" style="margin-top:18px"><button class="packbtn active" type="button" data-credits="1" data-price="1"><strong>1 for $1</strong><span>$1.00 each</span></button><button class="packbtn" type="button" data-credits="5" data-price="4"><strong>5 for $4</strong><span>80¢ each</span></button><button class="packbtn" type="button" data-credits="10" data-price="7"><span class="badge">BEST VALUE</span><strong>10 for $7</strong><span>70¢ each</span></button></div><div id="emailrow" class="emailrow"><label class="label" for="email">Email for credit recovery</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email"><div class="hint">Needed for packs so you can recover unused credits later. No marketing email.</div></div><button id="buy" class="btn">Continue to secure checkout — $1</button><div class="note">Payments are handled by Stripe. No subscription will be created.</div></section>
 <section class="promises"><div>No subscription</div><div>Credits never expire</div><div>Static QR codes</div><div>No funny business</div></section>
-
-<section class="why">
-  <h2>Cheap on purpose. Simple on purpose.</h2>
-  <p>We automated the boring parts so we don't have to charge you $10 every month for something that should cost a buck. No sales team. No account manager. No recurring fee. The product is designed to be self-service from beginning to end.</p>
-  <p><b>And your finished QR code doesn't depend on us.</b> The destination is stored directly in the image. If OneBuckQR disappeared tomorrow, your downloaded static QR would still work as long as the destination address still exists.</p>
-</section>
-
-<section class="faq">
-  <details><summary>Do unused credits expire?</summary><p>No. If you buy ten and use two, the other eight remain yours. Use them next week, next year, or years from now.</p></details>
-  <details><summary>Which format should I choose?</summary><p>PNG is the easy default for websites, social media, email, and most everyday uses. SVG is ideal for printing or enlarging a QR for posters, signs, menus, and business cards.</p></details>
-  <details><summary>Can I change the destination later?</summary><p>No. These are static QR codes. That is why they cannot be switched off and why there is no subscription. Always test the destination before printing.</p></details>
-  <details><summary>Why is support limited?</summary><p>Keeping OneBuckQR automated and self-service is how we keep the price tiny. The site is built to handle purchases, downloads, credit recovery, and common problems without requiring individual support.</p></details>
-</section>
+<section class="why"><h2>Cheap on purpose. Simple on purpose.</h2><p>We automated the boring parts so we don't have to charge you $10 every month for something that should cost a buck. No sales team. No account manager. No recurring fee. The product is designed to be self-service from beginning to end.</p><p><b>And your finished QR code doesn't depend on us.</b> The destination is stored directly in the image. If OneBuckQR disappeared tomorrow, your downloaded static QR would still work as long as the destination address still exists.</p></section>
+<section class="faq"><details><summary>Do unused credits expire?</summary><p>No. If you buy ten and use two, the other eight remain yours. Use them next week, next year, or years from now.</p></details><details><summary>Which format should I choose?</summary><p>PNG is the easy default for websites, social media, email, and most everyday uses. SVG is ideal for printing or enlarging a QR for posters, signs, menus, and business cards.</p></details><details><summary>Can I change the destination later?</summary><p>No. These are static QR codes. That is why they cannot be switched off and why there is no subscription. Always test the destination before printing.</p></details><details><summary>Why is support limited?</summary><p>Keeping OneBuckQR automated and self-service is how we keep the price tiny. The site is built to handle purchases, downloads, credit recovery, and common problems without requiring individual support.</p></details></section>
 </main>
-
-<section id="success" class="success">
-  <div class="eyebrow"><span class="dot"></span>ready to download</div>
-  <h2>That's it.<br>It's yours.</h2>
-  <p>Your QR code is static. There is no subscription to cancel and no renewal fee to keep it working.</p>
-  <div class="balance" id="balancebox">Credits remaining: <span id="balance">0</span></div>
-  <div class="downloadrow">
-    <button id="download" class="btn" style="margin:0">Download PNG</button>
-    <button id="another" class="secondary">Make another QR</button>
-  </div>
-  <p class="hint">Tip: scan the downloaded QR once before printing it in quantity.</p>
-</section>
-
+<section id="success" class="success"><div class="eyebrow"><span class="dot"></span>ready to download</div><h2>That's it.<br>It's yours.</h2><p>Your QR code is static. There is no subscription to cancel and no renewal fee to keep it working.</p><div class="balance" id="balancebox">Credits remaining: <span id="balance">0</span></div><div class="downloadrow"><button id="download" class="btn" style="margin:0">Download PNG</button><button id="another" class="secondary">Make another QR</button></div><p class="hint">Tip: scan the downloaded QR once before printing it in quantity.</p></section>
 <footer><span>© 2026 OneBuckQR</span><span><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></span></footer>
 </div>
-
+<dialog id="testDialog"><h2 style="margin-top:0">Test your destination</h2><p>This is the exact address your finished QR will use:</p><div id="dialogUrl" class="dialogurl"></div><div class="dialogactions"><button id="launchDest" class="btn" style="margin:0">Open test site</button><button id="closeDialog" class="secondary">Back to my QR</button></div><p class="hint">OneBuckQR stays open underneath. On some phones, the test site may open in another tab.</p></dialog>
 <script>
-const $=s=>document.querySelector(s);
-let target='';
-let qrStyle=sessionStorage.getItem('onebuckqr_style')||'classic';
-let fileFormat=sessionStorage.getItem('onebuckqr_format')||'png';
-let selectedCredits=1;
-let wallet=localStorage.getItem('onebuckqr_wallet')||'';
-let walletBalance=0;
-
-function clean(v){
-  v=v.trim();
-  if(!v) throw Error('Paste a link first.');
-  if(/\s/.test(v)) throw Error('Please enter one website link without spaces.');
-  if(!/^https?:\/\//i.test(v)) v='https://'+v;
-  let u; try{u=new URL(v)}catch{throw Error('That link does not look valid. Please check it and try again.')}
-  if(!['http:','https:'].includes(u.protocol)||!u.hostname.includes('.')) throw Error('Please enter a complete website address.');
-  return u.toString();
-}
-function safeName(v){return (v||'onebuckqr').trim().replace(/\.[a-z0-9]+$/i,'').replace(/[^a-z0-9-_ ]/gi,'').replace(/\s+/g,'-').replace(/-+/g,'-').slice(0,80)||'onebuckqr'}
-function obj(t){let q=qrcode(0,'M');q.addData(t);q.make();return q}
-function isFinder(r,c,n){return(r<7&&c<7)||(r<7&&c>=n-7)||(r>=n-7&&c<7)}
+const $=s=>document.querySelector(s);let target='';let qrStyle=sessionStorage.getItem('onebuckqr_style')||'classic';let fileFormat=sessionStorage.getItem('onebuckqr_format')||'png';let selectedCredits=1;let wallet=localStorage.getItem('onebuckqr_wallet')||'';let walletBalance=0;
+function clean(v){v=v.trim();if(!v)throw Error('Paste a link first.');if(/\s/.test(v))throw Error('Please enter one website link without spaces.');if(!/^https?:\/\//i.test(v))v='https://'+v;let u;try{u=new URL(v)}catch{throw Error('That link does not look valid. Please check it and try again.')}if(!['http:','https:'].includes(u.protocol)||!u.hostname.includes('.'))throw Error('Please enter a complete website address.');return u.toString()}
+function safeName(v){return(v||'onebuckqr').trim().replace(/\.[a-z0-9]+$/i,'').replace(/[^a-z0-9-_ ]/gi,'').replace(/\s+/g,'-').replace(/-+/g,'-').slice(0,80)||'onebuckqr'}
+function obj(t){let q=qrcode(0,'M');q.addData(t);q.make();return q}function isFinder(r,c,n){return(r<7&&c<7)||(r<7&&c>=n-7)||(r>=n-7&&c<7)}
 function svgMarkup(t,style=qrStyle){const q=obj(t),n=q.getModuleCount(),m=4,z=n+m*2;let p=[`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${z} ${z}">`,`<rect width="100%" height="100%" fill="white"/>`];for(let r=0;r<n;r++)for(let c=0;c<n;c++){if(!q.isDark(r,c))continue;const x=c+m,y=r+m,f=isFinder(r,c,n);if(style==='dots'&&!f)p.push(`<circle cx="${x+.5}" cy="${y+.5}" r=".39" fill="black"/>`);else if(style==='rounded'&&!f)p.push(`<rect x="${x+.08}" y="${y+.08}" width=".84" height=".84" rx=".24" fill="black"/>`);else if(style==='bold'&&!f)p.push(`<rect x="${x-.04}" y="${y-.04}" width="1.08" height="1.08" fill="black"/>`);else p.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="black"/>`)}p.push('</svg>');return p.join('')}
-function render(){ $('#qr').src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svgMarkup(target)); $('#dest').textContent=target }
+function render(){$('#qr').src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svgMarkup(target));$('#dest').textContent=target}
 function setStyle(style){qrStyle=style;sessionStorage.setItem('onebuckqr_style',style);document.querySelectorAll('.stylebtn').forEach(b=>b.classList.toggle('active',b.dataset.style===style));if(target)render()}
 function setFormat(format){fileFormat=format;sessionStorage.setItem('onebuckqr_format',format);document.querySelectorAll('.formatbtn').forEach(b=>b.classList.toggle('active',b.dataset.format===format));updateFilenameHint();if($('#success').style.display==='block')$('#download').textContent='Download '+format.toUpperCase()}
 function updateFilenameHint(){const name=safeName($('#filename').value);$('#filenamehint').innerHTML=`We'll save it as <b>${name}.${fileFormat}</b>.`}
 function choosePack(credits,price){selectedCredits=credits;document.querySelectorAll('.packbtn').forEach(b=>b.classList.toggle('active',Number(b.dataset.credits)===credits));$('#emailrow').style.display=credits>1?'block':'none';$('#buy').textContent=`Continue to secure checkout — $${price}`}
-
-document.querySelectorAll('.stylebtn').forEach(b=>b.onclick=()=>setStyle(b.dataset.style));
-document.querySelectorAll('.formatbtn').forEach(b=>b.onclick=()=>setFormat(b.dataset.format));
-document.querySelectorAll('.packbtn').forEach(b=>b.onclick=()=>choosePack(Number(b.dataset.credits),b.dataset.price));
-$('#filename').oninput=updateFilenameHint;setStyle(qrStyle);setFormat(fileFormat);
-
+document.querySelectorAll('.stylebtn').forEach(b=>b.onclick=()=>setStyle(b.dataset.style));document.querySelectorAll('.formatbtn').forEach(b=>b.onclick=()=>setFormat(b.dataset.format));document.querySelectorAll('.packbtn').forEach(b=>b.onclick=()=>choosePack(Number(b.dataset.credits),b.dataset.price));$('#filename').oninput=updateFilenameHint;setStyle(qrStyle);setFormat(fileFormat);
 function make(){try{target=clean($('#url').value);$('#url').value=target;sessionStorage.setItem('onebuckqr_target',target);sessionStorage.setItem('onebuckqr_filename',safeName($('#filename').value));render();$('#empty').classList.add('hide');$('#ready').classList.remove('hide');$('#purchase').classList.remove('hide');$('#error').textContent='';window.setTimeout(()=>$('#purchase').scrollIntoView({behavior:'smooth',block:'center'}),100)}catch(e){$('#error').textContent=e.message}}
 $('#make').onclick=make;$('#url').onkeydown=e=>{if(e.key==='Enter')make()};
-$('#openDest').onclick=()=>{if(target)window.open(target,'_blank','noopener')};
-
+$('#openDest').onclick=()=>{if(!target)return;$('#dialogUrl').textContent=target;$('#testDialog').showModal()};$('#closeDialog').onclick=()=>$('#testDialog').close();$('#launchDest').onclick=()=>{if(target)window.open(target,'_blank','noopener')};$('#testDialog').onclick=e=>{if(e.target===$('#testDialog'))$('#testDialog').close()};
 $('#buy').onclick=async()=>{try{$('#error').textContent='';if(!target)make();if(!target)return;const email=$('#email').value.trim();if(selectedCredits>1&&!/^\S+@\S+\.\S+$/.test(email))throw Error('Enter your email so your unused credits can be recovered later.');sessionStorage.setItem('onebuckqr_target',target);sessionStorage.setItem('onebuckqr_style',qrStyle);sessionStorage.setItem('onebuckqr_format',fileFormat);sessionStorage.setItem('onebuckqr_filename',safeName($('#filename').value));$('#buy').disabled=true;$('#buy').textContent='Opening secure checkout…';let r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credits:selectedCredits,email})});let d=await r.json();if(!d.url)throw Error(d.error||'Could not start checkout.');location.href=d.url}catch(e){$('#error').textContent=e.message;$('#buy').disabled=false;choosePack(selectedCredits,selectedCredits===1?1:selectedCredits===5?4:7)}};
-
 async function refreshWallet(){if(!wallet)return;try{let r=await fetch('/api/wallet?wallet='+encodeURIComponent(wallet));if(!r.ok)throw 0;let d=await r.json();walletBalance=d.balance||0;$('#walletcount').textContent=`${walletBalance} QR credit${walletBalance===1?'':'s'}`;$('#walletbar').style.display=walletBalance>0?'flex':'none'}catch{localStorage.removeItem('onebuckqr_wallet');wallet=''}}
 $('#usewallet').onclick=async()=>{try{if(!target){make();if(!target)return}let r=await fetch('/api/wallet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({wallet})});let d=await r.json();if(!r.ok)throw Error(d.error||'Could not use credit.');walletBalance=d.balance;showSuccess()}catch(e){$('#error').textContent=e.message}};
-
 async function unlockPurchase(){let p=new URLSearchParams(location.search);if(p.get('paid')!=='1')return;let id=p.get('session_id');let saved=sessionStorage.getItem('onebuckqr_target');if(!id||!saved)return;try{let r=await fetch('/api/verify?session_id='+encodeURIComponent(id));let d=await r.json();if(!d.paid)throw Error('Payment could not be verified.');wallet=d.wallet;localStorage.setItem('onebuckqr_wallet',wallet);target=saved;qrStyle=sessionStorage.getItem('onebuckqr_style')||'classic';fileFormat=sessionStorage.getItem('onebuckqr_format')||'png';let use=await fetch('/api/wallet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({wallet})});let ud=await use.json();if(!use.ok)throw Error(ud.error||'Could not activate your QR credit.');walletBalance=ud.balance;history.replaceState({},'',location.pathname);showSuccess()}catch(e){$('#error').textContent=e.message}}
 function showSuccess(){setStyle(qrStyle);setFormat(fileFormat);$('#main').classList.add('hide');$('#success').style.display='block';$('#balance').textContent=walletBalance;$('#balancebox').style.display='block';$('#download').textContent='Download '+fileFormat.toUpperCase();window.scrollTo({top:0,behavior:'smooth'})}
 function downloadSvg(){let b=new Blob([svgMarkup(target,qrStyle)],{type:'image/svg+xml'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=safeName(sessionStorage.getItem('onebuckqr_filename'))+'.svg';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 function downloadPng(){const q=obj(target),n=q.getModuleCount(),margin=4,modulePx=32,size=(n+margin*2)*modulePx,canvas=document.createElement('canvas');canvas.width=size;canvas.height=size;const ctx=canvas.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,size,size);ctx.fillStyle='#000';for(let r=0;r<n;r++)for(let c=0;c<n;c++){if(!q.isDark(r,c))continue;const x=(c+margin)*modulePx,y=(r+margin)*modulePx,f=isFinder(r,c,n);if(qrStyle==='dots'&&!f){ctx.beginPath();ctx.arc(x+modulePx/2,y+modulePx/2,modulePx*.39,0,Math.PI*2);ctx.fill()}else if(qrStyle==='rounded'&&!f){const inset=modulePx*.08,w=modulePx*.84,rad=modulePx*.24;ctx.beginPath();ctx.roundRect(x+inset,y+inset,w,w,rad);ctx.fill()}else if(qrStyle==='bold'&&!f){const g=modulePx*.04;ctx.fillRect(x-g,y-g,modulePx+g*2,modulePx+g*2)}else ctx.fillRect(x,y,modulePx,modulePx)}let a=document.createElement('a');a.href=canvas.toDataURL('image/png');a.download=safeName(sessionStorage.getItem('onebuckqr_filename'))+'.png';a.click()}
-$('#download').onclick=()=>fileFormat==='svg'?downloadSvg():downloadPng();
-$('#another').onclick=()=>{if(walletBalance<1){location.href='/';return}$('#success').style.display='none';$('#main').classList.remove('hide');$('#url').value='';target='';$('#ready').classList.add('hide');$('#empty').classList.remove('hide');$('#purchase').classList.add('hide');refreshWallet();window.scrollTo({top:0,behavior:'smooth'})};
-refreshWallet();unlockPurchase();
+$('#download').onclick=()=>fileFormat==='svg'?downloadSvg():downloadPng();$('#another').onclick=()=>{if(walletBalance<1){location.href='/';return}$('#success').style.display='none';$('#main').classList.remove('hide');$('#url').value='';target='';$('#ready').classList.add('hide');$('#empty').classList.remove('hide');$('#purchase').classList.add('hide');refreshWallet();window.scrollTo({top:0,behavior:'smooth'})};refreshWallet();unlockPurchase();
 </script>
 </body>
 </html>
