@@ -1,0 +1,21 @@
+# OneBuckQR
+
+> OneBuckQR is a simple paid static QR code generator at https://onebuckqr.com/.
+
+OneBuckQR creates permanent static QR codes for links. A single QR code costs $1 USD, with packs of 5 for $4 and 10 for $7. There is no subscription or monthly fee, and unused credits do not expire. Finished QR codes can be downloaded as PNG or SVG.
+
+## Primary pages
+- https://onebuckqr.com/ — QR code generator and pricing
+- https://onebuckqr.com/static-qr-code-generator.html — explanation of static QR codes, formats, and use cases
+- https://onebuckqr.com/help.html — help
+- https://onebuckqr.com/privacy.html — privacy policy
+- https://onebuckqr.com/terms.html — terms
+
+## Key facts
+- Static QR codes
+- $1 for one QR code
+- $4 for five QR codes
+- $7 for ten QR codes
+- No subscription
+- Unused credits do not expire
+- PNG and SVG downloads
